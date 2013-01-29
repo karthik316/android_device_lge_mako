@@ -14,6 +14,23 @@
 # limitations under the License.
 #
 
+# Xperience additions
+PRODUCT_RELEASE_NAME := GN-CDMA
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/ua/config/cdma.mk)
+
+# Inherit common config
+$(call inherit-product, vendor/ua/config/common.mk)
+
+# Inherit gapps config
+$(call inherit-product, vendor/ua/config/gapps.mk)
+# Xperience additions end
+
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
@@ -26,7 +43,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 PRODUCT_NAME := full_mako
 PRODUCT_DEVICE := mako
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full JellyBean on Mako
+PRODUCT_MODEL := Nexus 4
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := true
 
